@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecteurEmploiComponent } from './secteur-emploi.component';
+import { TestorientationComponent } from './testorientation.component';
 
-describe('SecteurEmploiComponent', () => {
-  let component: SecteurEmploiComponent;
-  let fixture: ComponentFixture<SecteurEmploiComponent>;
+describe('TestorientationComponent', () => {
+  let component: TestorientationComponent;
+  let fixture: ComponentFixture<TestorientationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SecteurEmploiComponent ]
+      declarations: [ TestorientationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SecteurEmploiComponent);
+    fixture = TestBed.createComponent(TestorientationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -516,6 +516,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio {
   padding: 60px 0;
+  margin: 5%;
 }
 
 .portfolio #portfolio-flters {
@@ -691,7 +692,7 @@ section {
 .col{
   border: 1px solid;
   border-radius: 5px;
-  width: 26%;
+  width: 30%;
   padding: 20px;
   margin: 10px;
 }

@@ -3,15 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { SecteurEmploiComponent } from './secteur-emploi/secteur-emploi.component';
+import { MetierComponent } from './metier/metier.component';
+import { TestorientationComponent } from './testorientation/testorientation.component';
+
 
 const routes: Routes = [
-  { path: "", redirectTo: "/accueil", pathMatch: "full" },
-    { path: "accueil", component: AccueilComponent },
-    { path: "a propos", component: AboutusComponent },
-    { path: "metier", component: SecteurEmploiComponent },
-    { path: "contact", component: ContactusComponent  },
-    { path: "*", component: AccueilComponent },
+    { path: '', component: AccueilComponent},
+    { path: 'aboutus', component: AboutusComponent},
+    { path: 'contactus', component: ContactusComponent},
+    { path: 'testorientation', component: TestorientationComponent},
+    { path: 'metier', component: MetierComponent},
+    { path: '*', component: AccueilComponent},
 ];
 
 @NgModule({
