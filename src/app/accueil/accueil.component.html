@@ -1,64 +1,114 @@
+
+<section id="hero">
+  <div class="hero-container">
+    <div class="row mt-5">
+    <div class="col-sm-8 text">
+      <h3>Welcome to prop's Job</h3>
+      <p>Trouver le métier qui vous correpond</p>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </div>
+  </div>
+</section><!-- #hero -->
+
+<div class="container-profil">
+  <div class="row mt-5">
+      <div class="col-sm-6">
+          <img class="img-fluid" 
+          src="assets/img/collegien.jpg">
+      </div>
+      <div class="col-sm-6 ">
+        <h1>collegien(ne)</h1>
+        Gagnez du temps dans l’orientation de vos enfants et aidez les à prendre confiance en eux ! 
+        En 3 séances avec un spécialiste de l’orientation collège, 
+        votre enfant aura trouvé sa voie et pourra se projeter en confiance dans l’avenir.
+        <ul>
+          <li>Trouver les métiers adaptés</li>
+          <li>Trouver le meilleur parcours d'étude</li>
+          <li>Prendre confiance en soi</li>
+        </ul>
+      </div>
+  </div>
+      <div class="row mt-5">
+      <div class="col-sm-6">
+        <h1>Lycéen(ne) ?</h1>
+        En seconde, en 1ère ou en terminale, vous trouverez les métiers faits pour vous et 
+        le chemin d’études précis pour y parvenir. Un programme individuel simple et efficace 
+        qui permet de se projeter sans doute dans son avenir et de s’épanouir. 
+        Vous gagnez du temps, économisez de l’argent en assurant le bon choix d’orientation.
+        <ul>
+          <li>Trouver les métiers adaptés</li>
+          <li>Trouver le meilleur parcours d'étude</li>
+          <li>Prendre confiance en soi</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 ">
+        <img class="img-fluid" 
+        src="assets/img/genie.jpg" >
+      </div>
+  </div>
+      <div class="row mt-5">
+      <div class="col-sm-6">
+          <img class="img-fluid" 
+          src="assets/img/etudiant.jpg">
+      </div>
+      <div class="col-sm-6">
+        <h1>Etudiant(e) ?</h1>
+            Pour valider un choix d’orientation ou se réorienter, 
+            vous serez certain(e) de votre voie. Avec un spécialiste de 
+            l’orientation vous trouverez les métiers faits pour vous et le chemin d’études pour y parvenir.
+<ul>
+  <li>Trouver les métiers adaptés</li>
+  <li>Trouver le meilleur parcours d'étude</li>
+  <li>Prendre confiance en soi</li>
+</ul>
+      </div>
+  </div>
+</div>
+
+<div class="section get-started">
+  <div class="container-button">
+    <div class="row">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
 <main id="main">
-
-    <!-- ======= About Us Section ======= -->
-
-    <div class="title">
+  <div class="title">
       <h5>repondez à ces questions svp...</h5>
     </div>
     <section class="search-sec">
         <div class="container">
-            <form >
+            <form #formulaire="ngForm">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
                           <div class="col-lg-2 col-md-2 col-sm-12 p-0">
-                            <select class="form-control search-slt" id="exampleFormControlSelect1" >
-                                <option>Vous êtes un?</option>
-                                <option>collegien</option>
-                                <option>lyceen</option>
-                                <option>etudiant</option>
+                            <select #mySelect class="form-control search-slt" id="exampleFormControlSelect1"  (change)="affichMetierEnfonctionduprofil(mySelect.value)">
+                              <option>votre Profil</option>
+                              <option  *ngFor="let profile of profiles" [value]="profile._id" >{{profile.libelle}}</option>
                             </select>
                         </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
                                 <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                    <option>quel est votre Niveau d'étude</option>
-                                    <option>6ieme</option>
-                                    <option>5ieme</option>
-                                    <option>4ieme</option>
-                                    <option>3ieme</option>
-                                    <option>seconde</option>
-                                    <option>premiere</option>
-                                    <option>terminale</option>
-                                    <option>bac+1</option>
-                                    <option>bac+2</option>
-                                    <option>bac+3</option>
-                                    <option>bac+4</option>
-                                    <option>bac+5</option>
-                                    
+                                  <option>votre Niveau d'étude</option>
+                                  <option *ngFor="let nivoetude of niveauetude">{{nivoetude.libelle}}</option>
                                 </select>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
                                 <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                    <option>quel est votre Diplôme?</option>
-                                    <option>cepe</option>
-                                    <option>bepc</option>
-                                    <option>bac</option>
-                                    <option>bts</option>
-                                    <option>licence</option>
-                                    <option>master</option>
-                                    <option>ingenieur</option>
+                                  <option>votre Diplome</option>
+                                  <option *ngFor="let diplome of diplomes">{{diplome.libelle}}</option>
                                 </select>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
                                 <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                    <option>quel est votre Filière?</option>
-                                    <option>Droit</option>
-                                    <option>Reseaux-Informatique et telcommunication</option>
-                                    <option>Gestion commerciale</option>
-                                    <option>Genie civil</option>
-                                    <option>Paramedical</option>
-                                    <option>Finance Comptabilité et gestion d'entreprise</option>
-                                    <option>RHcom</option>
+                                  <option>Choisiiez votre Filière</option>
+                                  <option *ngFor="let filiere of filieres">{{filiere.libelle}}</option>
                                 </select>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
@@ -71,170 +121,38 @@
         </div>
     </section>
 
-    
-    
-    <!-- End About Us Section -->
-    
-    <!-- ======= Our Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+
+    <section id="vuemetier" class="vue-metier">
       <div class="container">
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 filter-app">
-            <div class="portfolio-item">
+        <div class="row">
+          <div class="col-lg-4"*ngFor="let metier of metiers">
+            <div class="item">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
+              <div class="secteur-titre"><h5 class="">{{metier.profil_metier?.libelle}}</h5></div>
             </div>
-            <div class="secteur-title"><h5 class="">Banque-finance</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Numerique</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-app">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2">
-                  </a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Esthetique-beauté-coiffure</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Paramédical</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Architect-Btp</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-app">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Evenementiel</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1">
-                  </a></h3>
-                  
-                <div>
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="secteur-title"><h5>Assurance</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"></a></h3>
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-            <div  class="secteur-title"><h5>Droit-justice</h5></div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1"></a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1"></a>
-                  <a href="portfolio-details.html" title="Details"><i class="icofont-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div  class="secteur-title"><h5>Commerce</h5></div>
           </div>
         </div>
-
       </div>
-    </section><!-- End Our Portfolio Section -->
+    </section>
+    
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2>Contact Us</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
-
         <div class="row">
-
-          
-
           <div class="col-lg-3 col-md-6">
             <div class="info">
               <div>
                 <i class="icofont-google-map"></i>
                 <p><br></p>
               </div>
-
               <div>
                 <i class="icofont-envelope"></i>
                 <p>queenb@example.com</p>
               </div>
-
               <div>
                 <i class="icofont-phone"></i>
                 <p>+225 22 45 67 89</p>

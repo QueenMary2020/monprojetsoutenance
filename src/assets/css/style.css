@@ -1,9 +1,3 @@
-/**
-* Template Name: Amoeba - v2.3.0
-* Template URL: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -24,6 +18,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, .font-primary {
   font-family: "Lato", sans-serif;
+
 }
 
 /*--------------------------------------------------------------
@@ -246,6 +241,26 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   text-decoration: none;
 }
 
+.btn{
+  margin-left: 20%;
+}
+
+.container-started{
+  background-color: #00d3b8;
+  width: auto;
+  height: 100px;
+}
+
+h1 {
+  color: #55acee;
+  text-align: center;
+}
+
+.container-forms{
+  margin: auto 0;
+}
+
+
 .mobile-nav .drop-down > a:after {
   content: "\ea99";
   font-family: IcoFont;
@@ -320,15 +335,28 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-background.jpg") top center;
+  background: url("../img/h1_hero.jpg") top center;
   background-size: cover;
   position: relative;
   margin-bottom: -80px;
 }
-
+.container-profil{
+  margin: 10% 3% 5%;
+  background: #f7f7f7 !important;
+ 
+}
+.img-fluid{
+  width: 600px; 
+  height: 300px;
+}
+.hero-container .text {
+  margin-left: -25%;
+  color: brown;
+  font-size: 50px;
+  font-weight: 700; 
+}
 #hero:before {
   content: "";
-  background: rgba(112, 185, 176, 0.85);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -337,13 +365,14 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero .hero-container {
+  width: 100%;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  padding-top: 80px;
+  padding-top: 10%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -483,34 +512,6 @@ section {
     display: inline-block;
   }
 }
-
-/*--------------------------------------------------------------
-# About Us
---------------------------------------------------------------*/
-.about h3 {
-  font-weight: 400;
-  font-size: 26px;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about ul li {
-  padding-bottom: 10px;
-}
-
-.about ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #70b9b0;
-}
-
-.about p:last-child {
-  margin-bottom: 0;
-}
-
 /*--------------------------------------------------------------
 # Our Portfolio
 --------------------------------------------------------------*/
