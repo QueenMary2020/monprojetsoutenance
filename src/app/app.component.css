@@ -1,3 +1,37 @@
-.container-vue .row{
-width: 80%;
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    background-color:#5d4954 ;
+    font-family: 'Cardo', serif;
+}
+.logo{
+    color: rgb(200,200,200);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-link li{
+    list-style: none;
+}
+
+.nav-link a{
+    color: rgb(200,200,200);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+
 }
