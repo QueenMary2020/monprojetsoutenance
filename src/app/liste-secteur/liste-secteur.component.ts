@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Secteur } from 'src/app/models/secteur';
 
 @Component({
   selector: 'app-liste-secteur',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeSecteurComponent implements OnInit {
 
-  constructor() { }
+  secteurs: Secteur[] = [];
+
+  constructor( private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
-
+  voirPlus(secteurid){
+    this.router.navigate(['/liste-secteur', secteurid])
+    console.log(secteurid);
+  
+  }
 }

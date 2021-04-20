@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { DetailMetierComponent } from './detail-metier/detail-metier.component';
+import { ContactComponent } from './contact/contact.component';
+import { DetailSecteurComponent } from './detail-secteur/detail-secteur.component';
 import { HomeComponent } from './home/home.component';
+import { ListeSecteurComponent } from './liste-secteur/liste-secteur.component';
 
 
 
 
-const routes: Routes = [
-    { path: '', component: HomeComponent},
-    { path: 'aboutus', component: AboutusComponent},
-    { path: 'liste-secteur-emploi/:id' , component: DetailMetierComponent},
-    { path: '',   redirectTo: '/accueil', pathMatch: 'full' },
+export const routes: Routes = [
+
+    { path: '', component: HomeComponent },
+    { path: 'aboutus', component: AboutusComponent, data: {breadcrumb: "aboutus"}},
+    { path: 'liste-secteur', component: ListeSecteurComponent, data: {breadcrumb: "liste-secteur"}},
+    { path: 'liste-secteur/:id' , component: DetailSecteurComponent},
+    { path: 'contact', component: ContactComponent, data: {breadcrumb: "contact"}},
+    { path: '',   redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomeComponent},
 ];
 

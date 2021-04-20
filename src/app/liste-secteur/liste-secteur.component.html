@@ -1,1 +1,93 @@
-<p>liste-secteur works!</p>
+
+
+
+ 
+ 
+ <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+            
+             <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row">
+                        <div class="col-xl-5">
+                           <p>Plus de 1000 orientations possibles, laquelle pour moi ?
+                            Futurness, ma solution.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200" >
+        <div class="col-lg-3 col-md-4 portfolio-item filter-app" *ngFor="let secteur of secteurs" (click)="voirPlus(secteur.id)" >
+          <div class="portfolio-wrap">
+            <a  [routerLink]="['/liste-secteur', secteur.id]">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-md-4 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+           
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->

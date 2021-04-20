@@ -1,5 +1,5 @@
 export class Secteur {
-    _id: string;
+    id: Number;
     image: string;
     libelle: string;
     caracteristique: string;
